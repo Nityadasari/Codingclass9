@@ -1,0 +1,27 @@
+import java.util.Scanner;
+import java.util.*;
+class Coding3
+{
+    public static void main(String args[])
+    {
+        Scanner sc=new Scanner(System.in);
+        int i;
+        int n=sc.nextInt();
+        int r=sc.nextInt();
+        int arr[]=new int[n];
+        int brr[]=new int[n];
+        for(i=0;i<n;i++)
+        brr[i]=sc.nextInt();
+        for(i=0;i<n;i++)
+        {
+            if((i-r)<0)
+            {
+                arr[n+i-r]=brr[i];
+            }
+            else
+            arr[i-r]=brr[i];
+        }
+        for(i=0;i<n;i++)
+        System.out.println(arr[i]+" ");
+    }
+}
